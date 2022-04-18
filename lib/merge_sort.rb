@@ -1,5 +1,5 @@
 def merge_sort(arr)
-  return arr if arr.size == 1
+  return arr if arr.size <= 1
 
   left, right = arr.each_slice((arr.size / 2.0).ceil)
                    .map { |half| merge_sort(half) }
